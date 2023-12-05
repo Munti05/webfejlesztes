@@ -110,7 +110,7 @@ $(document).ready(function () {
 
             },
             email: "Kérlek add meg az email címedet!",
-            elfogad_check: "Kérem fogadja el a felhasználási feltételeket!",
+            elfogad_check: "Kérlek fogadd el a felhasználási feltételeket!",
         },
 
     });
