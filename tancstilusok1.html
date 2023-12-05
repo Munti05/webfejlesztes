@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Muntean_Aron">
+    <meta name="copyright" content="csak oktatasi celok miatt letrejott weboldal">
+    <meta name="description"
+        content="Egy létező tánciskolát bemutató oldal. Nem ez a hivatalos oldal, ez csupán oktatatási célokat szolgál és a rajta található információk eltérhetnek a valóságtól.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bitter&family=Open+Sans:ital@1&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="stiluslap/stilus.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favic/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favic/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favic/favicon-16x16.png">
+    <link rel="manifest" href="favic/site.webmanifest">
+
+    <script src="javascript/jscode.js" defer></script>
+    <script src="javascript/jquery-3.7.1.min.js"></script>
+    <script src="javascript/galleria-1.6.1/dist/galleria.min.js"></script>
+    <script src="javascript/galleria-1.6.1/dist/themes/classic/galleria.classic.min.js"></script>
+
+    <title>Táncklub</title>
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><img id="header_logo" src="kepek/faviconnak.png"
+                alt="Ez a kép az egyesület logója."></a>
+        <p class="headerp"><a href="index.html">ISIS Tánciskola</a></p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">kezdőlap</a></li>
+            <li><a href="rolunk1.html">rólunk</a></li>
+            <li><a href="#" id="aktualis_menu">táncstílusok</a></li>
+            <li><a href="jelentkezes1.html">jelentkezés</a></li>
+            <li><a href="kapcsolatok1.html">kapcsolat</a></li>
+        </ul>
+    </nav>
+    <div id="felfele_nyil"><img src="kepek/arrow_up_icon.png" alt="Ez az icon felvisz az oldal tetejére."
+            onclick="felugrik()"></div>
+
+
+    <div id="galeria" class="galeria_osztaly">
+        <img src="kepek/galeria/galeria1.jpg" alt="Színes forgatag. Ilyen egy táncest nálunk."
+            title="Első kép (teszthez).">
+        <img src="kepek/galeria/galeria2.jpg" alt="Érzelmes pillanat a próba közbe." title="Második kép (teszthez).">
+        <img src="kepek/galeria/galeria3.jpg" alt="Meghitt pár az eseményünkön." title="Harmadik kép (teszthez).">
+        <img src="kepek/galeria/galeria4.jpg" alt="A szorgalmasabbak még otthon is gyakorolnak."
+            title="Negyedik kép (teszthez).">
+        <img src="kepek/galeria/galeria5.jpg" alt="Fellépésünk egy utcabálon." title="Ötödik kép (teszthez).">
+        <img src="kepek/galeria/galeria6.jpg" alt="Előadásunk színházi keretek közt."
+            title="Hatodik kép (teszthez).">
+        <img src="kepek/galeria/galeria7.jpg" alt="Az otthoni próbák élvezete." title="Hetedik kép (teszthez).">
+        <img src="kepek/galeria/galeria8.jpg" alt="Táncversenyen vannak a tanoncaink."
+            title="Nyolcadik kép (teszthez).">
+    </div>
+
+    <article class="teszt">
+        <h2 class="teszt_cim">Inspirálónak találtad a képeket?<br>Érdekel, hogy vajon melyik táncstílus illene hozzád?
+            Gyere,
+            töltsd ki ezt a rövid kérdőívet és mi eláruljuk, melyik passzolna legjobban hozzád!</h2>
+        <hr id="teszt_hr">
+        <form id="myform" action="http://szamtud.uni-corvinus.hu/receive.php" method="post">
+            <table>
+                <tr>
+                    <td><label for="kedvenc_kep" class="tabla_cim">A fenti képek közül melyikkel tudtál leginkább
+                            azonosulni?
+                            (1-8)</label></td>
+                    <td class="beviteli"><input type="number" name="elso" id="kedvenc_kep" min="1" max="8" step="1"
+                            placeholder=".../8"></td>
+                </tr>
+                <tr>
+                    <td><label for="valasztos" class="tabla_cim">A táncoddal szeretnél kitűnni a tömegből, vagy csak
+                            jóléreznéd
+                            magad?</label></td>
+                    <td class="beviteli">
+                        <select name="masodik" id="valasztos">
+                            <option value="0">Válassz az alábbiak közül</option>
+                            <option value="0">------------------------</option>
+                            <option value="1">Kitűnni a tömegből</option>
+                            <option value="2">Jólérezni magam</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="sajat_valasz" class="tabla_cim">Miért szeretnél elkezdeni táncolni?</label></td>
+                    <td class="beviteli"><input type="text" name="harmadik" id="sajat_valasz"
+                            placeholder="saját válasz"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" id="bekuldo_igazitas"><input type="submit" name="bekuldo" id="teszt_bekuldo"
+                            value="Kalkulálás"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" id="teszt_visszajelzes"></td>
+                </tr>
+            </table>
+        </form>
+    </article>
+    <article class="fekete_leiras">
+        <h1>Táncórák beosztás.</h1>
+        <p id="orarend_felett">Már tudod milyen tánc illik hozzád, lentebb láthatod a próbák beosztását. Most már csak
+            <a class="orarend_jelentkezes" href="jelentkezes1.html">jelentkezned</a> kell!
+        </p>
+
+        <table class="orarend">
+            <tr>
+                <td class="napbeosztas">
+                    <p>Hétfő</p>
+                </td>
+                <td>
+                    <p>Salsa, Rumba</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="napbeosztas">
+                    <p>Kedd</p>
+                </td>
+                <td>
+                    <p>Argentin tangó, Jive</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="napbeosztas">
+                    <p>Szerda</p>
+                </td>
+                <td>
+                    <p>Bécsi keringő, Mambó</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="napbeosztas">
+                    <p>Csütörtök</p>
+                </td>
+                <td>
+                    <p>Cha-cha-cha, Quickstep</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="napbeosztas">
+                    <p>Péntek</p>
+                </td>
+                <td>
+                    <p>Paso doble, Szamba</p>
+                </td>
+            </tr>
+        </table>
+    </article>
+
+    <footer>
+
+        <div class="logotabla">
+            <p class="jelentkezes_footer"><a href="jelentkezes1.html">Jelentkezz még ma.</a></p>
+            <p>Lépj velünk kapcsolatba:</p>
+            <table>
+                <tr>
+                    <td><img class="kozossegi_logok" src="kepek/whatsup_logo.png" alt="ez a whatsup logója"></td>
+                    <td><img class="kozossegi_logok" src="kepek/twitter_logo.png" alt="ez a twitter logója"></td>
+                    <td><img class="kozossegi_logok" src="kepek/youtube_logo.png" alt="ez a youtube logója"></td>
+                    <td><img class="kozossegi_logok" src="kepek/instagrem_logo.png" alt="ez az instagram logója">
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="tajekoztato_szveg">
+            Ez a weboldal csak oktatási célokat szolgál. Az itt található információk csak kitalációk. <br>Szerző:
+            Muntean
+            Áron. <br>Budapesti Corvinus Egyetem, 2023 &copy;
+        </div>
+    </footer>
+</body>
+
+</html>

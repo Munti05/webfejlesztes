@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Muntean_Aron">
+    <meta name="copyright" content="csak oktatasi celok miatt letrejott weboldal">
+    <meta name="description"
+        content="Egy létező tánciskolát bemutató oldal. Nem ez a hivatalos oldal, ez csupán oktatatási célokat szolgál és a rajta található információk eltérhetnek a valóságtól.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bitter&family=Open+Sans:ital@1&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="stiluslap/stilus.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favic/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favic/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favic/favicon-16x16.png">
+    <link rel="manifest" href="favic/site.webmanifest">
+
+    <script src="javascript/jscode.js" defer></script>
+    <script src="javascript/jquery-3.7.1.min.js"></script>
+    <script src="javascript/jquery-validation-1.19.5/dist/jquery.validate.min.js"></script>
+
+    <title>Táncklub</title>
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><img id="header_logo" src="kepek/faviconnak.png"
+                alt="Ez a kép az egyesület logója."></a>
+        <p class="headerp"><a href="index.html">ISIS Tánciskola</a></p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">kezdőlap</a></li>
+            <li><a href="rolunk1.html">rólunk</a></li>
+            <li><a href="tancstilusok1.html">táncstílusok</a></li>
+            <li><a href="#" id="aktualis_menu">jelentkezés</a></li>
+            <li><a href="kapcsolatok1.html">kapcsolat</a></li>
+        </ul>
+    </nav>
+    <div id="felfele_nyil"><img src="kepek/arrow_up_icon.png" alt="Ez az icon felvisz az oldal tetejére."
+            onclick="felugrik()"></div>
+
+    <div class="jelentkezes_kezdo">
+        <p class="jelentkezes_kezdo_szoveg">
+            "Mi vagyunk azok, akik hiszünk abban, hogy a társastánc nem csak egy mozgásforma, hanem egy életérzés,
+            egy
+            közösség és egy kreatív kifejezési mód is. Az ISIS Tánciskolát az a vágy
+            vezérli,
+            hogy minél több
+            ember számára elérhetővé tegyük a tánc örömét, és hozzájáruljunk a táncvilág szépségének és
+            gazdagságának
+            terjesztéséhez."
+        </p>
+    </div>
+    
+    <div class="urlap_igazitashoz">
+        <article class="jelentkezes_urlap">
+            <h1>Kedvet kaptál? Jelentkezz!</h1>
+            <form action="http://szamtud.uni-corvinus.hu/receive.php" method="post" id="jelentkezes_urlap" novalidate>
+                <table>
+                    <tr>
+                        <td colspan="2" class="alcimek_table">
+                            <hr>
+                        </td>
+                        <td class="alcimek_table">Személyes információk</td>
+                        <td colspan="2" class="alcimek_table">
+                            <hr>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="tabla_cim"><label for="vezetek">Vezetéknév</label></td>
+                        <td colspan="3"><input type="text" name="vnev" id="vezetek" size="10"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="tabla_cim"><label for="kereszt">Utónév</label></td>
+                        <td colspan="3"><input type="text" name="knev" id="kereszt" size="20"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="tabla_cim"><label for="datum">Születési dátum</label></td>
+                        <td colspan="3"><input type="date" size="20" name="szul_datum" id="datum"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="tabla_cim"><label for="elektronikus_cim">E-mail cím</label></td>
+                        <td colspan="3"><input type="email" name="email" size="20" id="elektronikus_cim"
+                                placeholder="pelda@email.com"></td>
+                    </tr>
+                    <tr>
+
+                        <td colspan="2" class="alcimek_table">
+                            <hr>
+                        </td>
+                        <td class="alcimek_table">Regisztrációs információk</td>
+                        <td colspan="2" class="alcimek_table">
+                            <hr>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="tabla_cim"><label for="tancstilus_valasztas">Választott
+                                táncstílus</label></td>
+                        <td colspan="3">
+                            <input type="text" size="20" name="tancstilus" list="tancok" id="tancstilus_valasztas">
+                            <datalist id="tancok">
+                                <option value="Angol keringő"></option>
+                                <option value="Argentin tangó"></option>
+                                <option value="Bécsi keringő"></option>
+                                <option value="Cha-cha-cha"></option>
+                                <option value="Jive"></option>
+                                <option value="Mambó"></option>
+                                <option value="Paso doble"></option>
+                                <option value="Quickstep"></option>
+                                <option value="Rumba"></option>
+                                <option value="Szamba"></option>
+                                <option value="Salsa"></option>
+                            </datalist>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="tabla_cim">Van táncos előismereted?</td>
+
+                        <td class="valasztas"><label for="felval_i">Van</label><input type="radio" name="tancolt_e"
+                                value="van" id="felval_i"></td>
+                        <td></td>
+                        <td class="valasztas"> <label for="felval_n">Nincs</label><input type="radio" name="tancolt_e"
+                                value="nincs" id="felval_n"></td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="5" class="tabla_cim">Próbára alkalmas időpontok</td>
+                    </tr>
+                    <tr>
+                        <td><label class="jelolo" for="he">Hé.</label><input type="checkbox" name="hetfo" id="he"></td>
+                        <td><label class="jelolo" for="ke">Ke.</label><input type="checkbox" name="kedd" id="ke"></td>
+                        <td><label class="jelolo" for="sze">Sze.</label><input type="checkbox" name="szerda" id="sze">
+                        </td>
+                        <td><label class="jelolo" for="csu">Csü.</label><input type="checkbox" name="csutortok"
+                                id="csu"></td>
+                        <td><label class="jelolo" for="pe">Pé.</label><input type="checkbox" name="pentek" id="pe"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="alcimek_table">
+                            <hr>
+                        </td>
+                        <td class="alcimek_table">Véleményed a jelentkezés folyamatáról</td>
+                        <td colspan="2" class="alcimek_table">
+                            <hr>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="tabla_cim"><label for="megjegyzes">Megjegyzés</label></td>
+                        <td colspan="3"><textarea name="velemeny" id="megjegyzes" rows="2" cols="20"
+                                placeholder="ide írhatsz"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="tabla_cim"><label for="elfogadas">Elfogadom a jelentkezési
+                                feltételeket:</label></td>
+                        <td colspan="3"><input type="checkbox" id="elfogadas" name="elfogad_check"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="tabla_alja_gombok"><input type="submit" value="Jelentkezés"></td>
+                        <td></td>
+                        <td colspan="2" class="tabla_alja_gombok"><input id="ujra_jelentkezes" onclick="elorol()"
+                                type="reset" value="Újra"></td>
+                    </tr>
+
+                </table>
+
+            </form>
+        </article>
+    </div>
+    <article class="feher_leiras">
+        <h1>
+            Miért mi?
+        </h1>
+        <p>
+            Oktatóink nemcsak magasan kvalifikáltak és tapasztaltak, de szenvedélyesen szeretik azt,
+            amit csinálnak. Minden óra lehetőséget kínál a fejlődésre, és mi mindent megteszünk azért, hogy minden
+            tanítványunk a legjobb tánctudással távozhasson.
+        </p><br>
+        <p>
+            Legyen szó kezdő vagy haladó szintű táncosokról, nálunk mindenki megtalálja a neki
+            megfelelő táncstílust. Legyen az tangó, salsa, vagy éppen a kizomba, széles repertoárunkban mindenki
+            megtalálhatja a számára legkedvesebb táncot.
+        </p><br>
+        <p>
+            Az ISIS Tánciskola nemcsak egy oktatási központ, hanem egy közösség is. Itt olyan emberekkel
+            találkozhat, akik hasonló szenvedéllyel rendelkeznek a tánc iránt. Az óráink nemcsak tanulásra, hanem
+            szórakozásra is szolgálnak, és remek lehetőséget teremtenek új barátságok kialakítására.
+        </p>
+    </article>
+    <footer>
+        <hr class="footer_hr">
+        <div class="logotabla">
+            <p class="jelentkezes_footer"><a href="jelentkezes1.html">Jelentkezz még ma.</a></p>
+            <p>Lépj velünk kapcsolatba:</p>
+            <table>
+                <tr>
+                    <td><img class="kozossegi_logok" src="kepek/whatsup_logo.png" alt="ez a whatsup logója"></td>
+                    <td><img class="kozossegi_logok" src="kepek/twitter_logo.png" alt="ez a twitter logója"></td>
+                    <td><img class="kozossegi_logok" src="kepek/youtube_logo.png" alt="ez a youtube logója"></td>
+                    <td><img class="kozossegi_logok" src="kepek/instagrem_logo.png" alt="ez az instagram logója">
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="tajekoztato_szveg">
+            Ez a weboldal csak oktatási célokat szolgál. Az itt található információk csak kitalációk. <br>Szerző:
+            Muntean
+            Áron. <br>Budapesti Corvinus Egyetem, 2023 &copy;
+        </div>
+    </footer>
+</body>
+
+</html>

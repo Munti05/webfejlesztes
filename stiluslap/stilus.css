@@ -1,0 +1,974 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Bitter', serif;
+}
+
+/*------------------------HTML ELEMEK + ALAP SZOVEGEK-------------------------*/
+.fekete_leiras {
+    background-color: black;
+    color: white;
+    padding: 15vw;
+    flex-basis: 100%;
+    text-align: left;
+    display: flex;
+    margin: 0;
+    flex-direction: column;
+}
+
+.feher_leiras {
+    padding: 15vw;
+    flex-basis: 100%;
+    text-align: left;
+    display: flex;
+    margin: 0;
+    flex-direction: column;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 3vh;
+    font-weight: 800;
+    padding-bottom: 10vw;
+    letter-spacing: 1vh;
+    margin: 0;
+    font-family: 'Bitter', serif;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h2 {
+    font-size: 2.3vh;
+    margin: 0;
+}
+
+p {
+    font-size: 1.6vh;
+    margin: 0;
+    letter-spacing: 0.5vh;
+}
+
+/*-------------------------HEADER-------------------------*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-weight: 600;
+    padding: 0.5vw 6vw 0.5vw 6vw;
+    background-color: white;
+    border-bottom: black solid 0.3vh;
+    position: fixed;
+    z-index: 1000;
+}
+
+#header_logo {
+    width: 5vh;
+}
+
+/*#5C2020*/
+header p a {
+    color: black;
+    font-family: 'Bitter', serif;
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+    font-size: 2vh;
+}
+
+/*-------------------------OLDAL TETEJERE NYIL-------------------------*/
+#felfele_nyil {
+    position: fixed;
+    bottom: 5vh;
+    right: 1vh;
+    display: none;
+    cursor: pointer;
+    animation: lathatosag 0.4s;
+}
+
+#felfele_nyil img {
+    width: 4.5vh;
+}
+
+#felfele_nyil img:hover {
+    opacity: 0.7;
+}
+
+@keyframes lathatosag {
+    from {
+        opacity: 0%;
+    }
+
+    to {
+        opacity: 100%;
+    }
+}
+
+/*-------------------------NAV-------------------------*/
+nav {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding-top: 7vh;
+    font-size: 2vh;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    list-style-type: none;
+    text-align: center;
+    padding: 1vw;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 1vw;
+    border-radius: 8vw;
+    transition: background-color 0.25s ease;
+    font-family: 'Bitter', serif;
+    font-family: 'Open Sans', sans-serif;
+}
+
+nav ul li a:visited {
+    color: black;
+    text-decoration: none;
+    padding: 1vw;
+}
+
+nav ul li a:hover {
+    color: white;
+    background-color: black;
+    border-radius: 8vw;
+}
+
+nav ul li #aktualis_menu:hover {
+    color: white;
+}
+
+#aktualis_menu {
+    color: white;
+    background-color: black;
+    border-radius: 8vw;
+}
+
+/*-------------------------FOOTER-------------------------*/
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: auto;
+    text-align: center;
+    padding: 2vh 5vh 2vh 5vh;
+    font-weight: 400;
+}
+
+.footer_hr {
+    width: 100%;
+    border: black 0.1vw solid;
+    margin-bottom: 2vw;
+}
+
+.tajekoztato_szveg {
+    font-size: 1vh;
+}
+
+.kozossegi_logok {
+    width: 10vw;
+    cursor: pointer;
+}
+
+.jelentkezes_footer {
+    display: flex;
+    justify-content: center;
+    margin: 1vw 0 1vw 0;
+    height: 7vh;
+}
+
+.jelentkezes_footer a {
+    text-decoration: none;
+    color: black;
+    margin: 2vw;
+    font-size: 1.6vh;
+    transition: font-size 0.5s ease;
+}
+
+.jelentkezes_footer a:hover {
+    color: #7d7d7d;
+    border: black solid 0.2vw;
+    border-radius: 4vw;
+    padding: 1.4vh;
+    font-size: 2vh;
+}
+
+table {
+    display: table;
+    width: 100%;
+    text-align: center;
+}
+
+table tr td {
+    padding: 1vw;
+}
+
+/*-------------------------KEZDOLAP-------------------------*/
+.kezdolap_eleje {
+    flex-wrap: wrap;
+    display: flex;
+    width: 100%;
+}
+
+.logo_kep {
+    display: flex;
+    flex-basis: 100%;
+    height: 60vh;
+    margin: 0;
+    padding: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../kepek/isis_logo_szerk.PNG);
+}
+
+.kezdolap_1 {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+}
+
+#kezdolap_elso_szoveg {
+    letter-spacing: 1vh;
+}
+
+.kezdolap_nyito {
+    flex-basis: 100%;
+    height: 60vh;
+    background-color: black;
+    color: white;
+    padding: 20vh 15vw 5vh 15vw;
+}
+
+.kezdolap_1_nyito_link {
+    font-size: 1.3vh;
+}
+
+.kezdolap_1_nyito_link a {
+    text-decoration: none;
+    color: white;
+    transition: font-size 0.3s ease;
+}
+
+.kezdolap_1_nyito_link a:hover {
+    color: #7d7d7d;
+    font-size: 1.5vh;
+    border: white solid 0.2vw;
+    border-radius: 4vw;
+    padding: 1.4vh;
+    transition: font-size 0.7s ease;
+}
+
+.kezdolap_virag {
+    display: flex;
+    width: 100%;
+    height: 60vh;
+    margin: 0;
+    padding: 0;
+    background-image: url("../kepek/virag_kezdolap_szerk.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: black;
+}
+
+.kezdolap_2 {
+    text-align: left;
+    padding: 5vw;
+    margin: 10vw 10vw 0 10vw;
+    flex-basis: 100%;
+    border-top: black solid 0.5vh;
+    border-left: black solid 0.5vh;
+}
+
+.kezdolap_tanchaz {
+    display: flex;
+    height: 40vh;
+    background-image: url("../kepek/tanchaz_kezdolap_szerk.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    flex-basis: 40vw;
+    min-height: 40vh;
+    width: 100%;
+}
+
+.vonal_hatterhez {
+    background-color: black;
+}
+
+.kezdolap_vonal_folyt {
+    background-color: black;
+    color: white;
+    padding: 5vw;
+    flex-basis: 100%;
+    text-align: left;
+    display: flex;
+    margin: 0 10vw 10vw 10vw;
+    flex-direction: column;
+    border-left: white solid 0.5vh;
+}
+
+#tudtad_gomb {
+    font-size: 3vh;
+    font-weight: 800;
+    padding: 4vw 2vw 4vw 2vw;
+    letter-spacing: 2vw;
+    margin: 0 0 2vw 0;
+    border: 0;
+    background-color: whitesmoke;
+    border-radius: 4vw;
+    border: black solid 0.4vw;
+    cursor: pointer;
+    transition: background-color 0.4s ease;
+    font-family: 'Bitter', serif;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#tudtad_gomb:hover,
+#tudtad_gomb.active {
+    color: white;
+    background-color: black;
+}
+
+.megjelenitendo {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    text-align: left;
+    font-weight: bold;
+    background-color: rgba(256, 256, 256, 0.87);
+    border-radius: 4vw;
+}
+
+.tudtad {
+    text-align: center;
+    padding: 15vw;
+    width: 100%;
+    background-image: url("../kepek/hatternek.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/*-------------------------ROLUNK-------------------------*/
+.tancospar_rolunk {
+    background-image: url("../kepek/tancospar_hatulrol_rolunk_szerk.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    flex-basis: 40vh;
+    min-height: 40vh;
+}
+
+.tagjaink {
+    display: flex;
+    background-color: black;
+    color: white;
+    padding: 15vw;
+    margin: 0;
+    width: 100%;
+    text-align: left;
+    flex-direction: column;
+}
+
+.rolunk_reszponziv_tancospar {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 8vh;
+    background-color: black;
+}
+
+.tagjaink_kep {
+    display: flex;
+    width: 100%;
+    height: 55vh;
+    margin: 0;
+    padding: 0;
+    background-image: url("../kepek/tancospar_oldalrol_rolunk.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: black;
+}
+
+.rolunk_tanctanar {
+    background-image: url("../kepek/rolunk_tanctanar_telo.png");
+    height: 110vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 15vw;
+}
+
+/*-------------------------TÁNCSTÍLUSOK-------------------------*/
+.galeria_osztaly {
+    margin: auto;
+    width: 100%;
+    height: 60vw;
+}
+
+.teszt_cim {
+    padding-bottom: 8vw;
+    text-align: center;
+}
+
+.teszt {
+    padding: 10vw;
+}
+
+#teszt_hr {
+    width: 80%;
+    margin-bottom: 2vh;
+}
+
+.teszt table tr td {
+    text-align: left;
+}
+
+.teszt table tr td input {
+    width: 100%;
+    font-size: 1.5vh;
+}
+
+.beviteli {
+    width: 35%
+}
+
+#valasztos {
+    width: 100%;
+}
+
+#teszt_bekuldo {
+    width: 40%;
+    background-color: black;
+    color: white;
+    border-radius: 10vh;
+    cursor: pointer;
+    font-family: 'Bitter', serif;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#bekuldo_igazitas {
+    text-align: center;
+}
+
+#teszt_visszajelzes {
+    text-align: center;
+}
+
+label {
+    cursor: pointer;
+}
+
+#orarend_felett {
+    padding-bottom: 10vw;
+}
+
+.orarend_jelentkezes {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: solid white 0.3vh;
+    padding-bottom: 0.5vh;
+}
+
+.orarend {
+    border-collapse: collapse;
+    border: solid white 0.3vh;
+}
+
+.orarend tr {
+    margin: 1vh 0 1vh 0;
+    border-top: solid white 0.3vh;
+}
+
+.orarend tr td {
+    padding: 1.5vh 0.5vh 1.5vh 0.5vh;
+}
+
+.napbeosztas {
+    text-align: left;
+}
+
+/*-------------------------JELENTKEZES-------------------------*/
+.jelentkezes_kezdo {
+    padding: 12vw 12vw 7.3vw 12vw;
+    width: 100%;
+    text-align: left;
+    color: white;
+    font-style: italic;
+    background-color: black;
+    font-weight: 400;
+}
+
+.urlap_igazitashoz {
+    display: flex;
+    justify-content: center;
+    background-image: url(../kepek/hatternek.jpg);
+    background-size: contain;
+}
+
+.jelentkezes_urlap {
+    display: flex;
+    flex-direction: column;
+    padding: 5vw;
+    flex-basis: 100%;
+    text-align: center;
+    font-size: 2.7vw;
+    background-color: black;
+    color: white;
+}
+
+.jelentkezes_urlap table {
+    border-collapse: collapse;
+    width: 95%;
+    text-align: center;
+}
+
+.jelentkezes_urlap tr {
+    width: 100%;
+}
+
+.tabla_cim {
+    font-size: 4vw;
+    width: 40%;
+    text-align: left;
+}
+
+.valasztas {
+    width: 29%;
+    font-size: 2.7vw;
+}
+
+.jelentkezes_urlap table tr td input {
+    font-size: 2.7vw;
+    width: 95%;
+}
+
+.jelolo {
+    font-size: 2.7vw;
+}
+
+#megjegyzes {
+    width: 90%;
+}
+
+.tabla_alja_gombok {
+    width: 40%;
+    padding: 8vw;
+}
+
+.alcimek_table {
+    font-size: 1.7vw;
+    padding: 3vh;
+}
+
+label.error {
+    font-size: 1.5vh;
+    color: #a63838;
+    display: block;
+}
+
+/*---------------------------KAPCSOLATOK---------------------------*/
+.kapcsolatok_logo {
+    display: flex;
+    flex-basis: 100%;
+    height: 60vh;
+    margin: 0;
+    padding: 0;
+    background-image: url("../kepek/isis_logo.PNG");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.kapcsolatok_kep {
+    display: flex;
+    flex-basis: 100%;
+    height: 60vh;
+    margin: 0;
+    padding: 0;
+    background-image: url("../kepek/homalyositott_par_kapcsolatok.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: black;
+}
+
+.kapcsolatok {
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.kapcsolatok_1 {
+    flex: 1;
+}
+
+.kapcsolatok_3 {
+    flex: 1
+}
+
+.terkep_kapcsolatok {
+    padding: 3vh;
+    background-color: black;
+    display: block;
+    color: white;
+    text-align: center;
+}
+
+.terkep_szoveg {
+    padding: 4vh 0 1vh 0;
+}
+
+.terkep_container {
+    background-image: url("../kepek/kapcsolatok_terkep.jpg");
+    height: 20vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0 4vh 0 4vh;
+}
+
+.kozep_box {
+    transition: .5s ease;
+    opacity: 0;
+    text-align: center;
+}
+
+.terkep_container:hover .kozep_box {
+    opacity: 0.7;
+}
+
+.ugro_szoveg {
+    padding-top: 9vh;
+}
+
+#terkepen_levo_szoveg {
+    text-decoration: none;
+    color: white;
+}
+
+/*---------------------------RESZPONZIVITASS---------------------------*/
+
+/*---------------------------tablet---------------------------*/
+@media all and (min-width: 550px) {
+    header {
+        letter-spacing: 2vh;
+        padding: 1.4vw 6vw 1.4vw 6vw;
+    }
+
+    nav {
+        padding-top: 9vh;
+    }
+.jelentkezes_footer{
+    height: 9vh;
+}
+    .kezdolap_eleje {
+        flex-wrap: wrap;
+    }
+
+    .kezdolap_1 {
+        flex-direction: row;
+    }
+
+    .kezdolap_nyito {
+        flex-basis: 60%;
+        padding: 12vh 2vw 2vw 10vw;
+    }
+
+    .kezdolap_virag {
+        width: 40%;
+    }
+
+    .rolunk_reszponziv_tancospar {
+        flex-direction: row;
+        padding: 4vh 0 3vh 0;
+    }
+
+    .tagjaink_kep {
+        width: 60%;
+    }
+
+    .tagjaink {
+        width: 40%;
+        padding: 12vh 4vw 5vh 2vw;
+    }
+
+    .rolunk_tanctanar {
+        background-image: url("../kepek/rolunk_tanctanar_tablet.png");
+        padding: 15vw 30vw 15vw 15vw;
+    }
+
+    .galeria_osztaly {
+        height: 50vw;
+    }
+
+    .teszt table tr td input {
+        font-size: 1.7vh;
+    }
+
+    #teszt_bekuldo {
+        width: 30%;
+    }
+
+    #orarend_felett {
+        padding-bottom: 5vw;
+    }
+
+    .orarend tr td {
+        padding: 3vh 1vh 3vh 1vh;
+    }
+
+    .jelentkezes_urlap {
+        flex-basis: 90%;
+    }
+
+    .tabla_cim {
+        font-size: 2.3vh;
+    }
+
+    .valasztas {
+        font-size: 2vh;
+    }
+
+    .jelolo {
+        font-size: 2vh;
+    }
+
+    .jelentkezes_urlap table tr td input {
+        font-size: 2vh;
+    }
+
+    .alcimek_table {
+        font-size: 1.5vw;
+    }
+
+    label.error {
+        font-size: 2vh;
+    }
+
+    .kapcsolatok_logo {
+        flex-basis: 40%;
+    }
+
+    .kapcsolatok_1 {
+        flex-basis: 50%;
+        padding: 12vh 2vw 5vh 2vw;
+        background-color: white;
+        color: black;
+    }
+
+    .kapcsolatok_kep {
+        flex-basis: 30%;
+        order: 1;
+    }
+
+    .kapcsolatok_3 {
+        flex-basis: 60%;
+        padding: 12vh 2vw 5vh 10vw;
+        background-color: black;
+        color: white;
+    }
+
+    .terkep_container {
+        height: 40vh;
+        margin: 0 8vh 0 8vh;
+    }
+
+    .ugro_szoveg {
+        padding-top: 19vh;
+    }
+}
+
+/*---------------------------szamitogep---------------------------*/
+@media all and (min-width: 786px) {
+    header p a {
+        font-size: 3vh;
+    }
+
+    .jelentkezes_footer {
+        margin-bottom: 1vw;
+    }
+
+    table tr td {
+        padding: 0.5vw;
+    }
+
+    .footer_hr {
+        width: 60%;
+        margin-top: 3vw;
+    }
+
+    nav {
+        padding-bottom: 2vw;
+        padding-top: 11vh;
+    }
+
+    nav ul li {
+        float: left;
+    }
+
+    nav ul li a {
+        padding: 0.5vw 4vw 0.5vw 4vw;
+    }
+
+    p {
+        font-size: 1.7vh;
+    }
+
+    h1 {
+        font-size: 3vh;
+        letter-spacing: 1vw;
+    }
+
+    h2 {
+        font-size: 2.7vh;
+    }
+
+    .logotabla {
+        width: 60%;
+        margin: auto;
+    }
+
+    .kozossegi_logok {
+        width: 8vw;
+    }
+
+    .logo_kep {
+        flex-basis: 40%;
+        background-color: black;
+        background-image: url("../kepek/isis_logo_szerk_inv.png");
+    }
+
+    .kezdolap_1 {
+        flex-basis: 60%;
+        height: 60vh;
+    }
+
+    #kezdolap_elso_szoveg {
+        padding-bottom: 3vw;
+    }
+
+    .kezdolap_2 {
+        padding: 5vw 1vw 5vw 4vw;
+        margin: 0 0 0 10vw;
+        border-top: 0;
+    }
+
+    .kezdolap_tanchaz {
+        flex-basis: 50vh;
+        min-height: 50vh;
+    }
+
+    .kezdolap_vonal_folyt {
+        border-bottom: white solid 0.5vh;
+    }
+
+    .tudtad_gomb {
+        padding: 3vw 2vw 3vw 2vw;
+        letter-spacing: 1vw;
+    }
+
+    .tancospar_rolunk {
+        flex-basis: 50vh;
+        min-height: 50vh;
+    }
+
+    .tagjaink {
+        padding: 12vh 4vw 5vh 0;
+    }
+
+    .rolunk_tanctanar {
+        background-image: url("../kepek/rolunk_tanctanar_gep_tablet.png");
+        padding: 10vw 43vw 15vw 12vw;
+    }
+
+    .galeria_osztaly {
+        height: 40vw;
+    }
+
+    #teszt_bekuldo {
+        width: 20%;
+    }
+
+    .jelentkezes_urlap {
+        width: 80%;
+    }
+
+    .tabla_cim {
+        font-size: 2.7vh;
+    }
+
+    .valasztas {
+        font-size: 2.5vh;
+    }
+
+    .jelolo {
+        font-size: 2.5vh;
+    }
+
+    .jelentkezes_urlap table tr td input {
+        font-size: 2.5vh;
+        width: 90%;
+    }
+
+    .megjegyzes {
+        font-size: 2.7vh;
+    }
+
+    .alcimek_table {
+        font-size: 1.2vw;
+        padding: 8vw 0 8vw 0;
+    }
+
+    .kapcsolatok_logo {
+        flex-basis: 50%;
+    }
+
+    .kapcsolatok_kep {
+        flex-basis: 50%;
+    }
+
+    .kapcsolatok_3 {
+        flex-basis: 50%;
+    }
+
+    .terkep_container {
+        height: 60vh;
+        margin: 0 20vh 0 20vh;
+    }
+
+    .ugro_szoveg {
+        padding-top: 29vh;
+    }
+
+}
+
+
+@media all and (min-width: 1100px) {
+    .rolunk_tanctanar {
+        background-image: url("../kepek/rolunk_tanctanar_gep.png");
+        padding: 10vw 43vw 15vw 12vw;
+    }
+}
