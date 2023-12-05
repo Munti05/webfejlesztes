@@ -807,11 +807,6 @@ label.error {
         font-size: 3vh;
     }
 
-    .jelentkezes_footer {
-        margin-bottom: 1vw;
-         height: 12vh;
-    }
-
     table tr td {
         padding: 0.5vw;
     }
@@ -845,6 +840,11 @@ label.error {
 
     h2 {
         font-size: 2.7vh;
+    }
+
+    .jelentkezes_footer {
+        margin-bottom: 1vw;
+        height: 12vh;
     }
 
     .logotabla {
