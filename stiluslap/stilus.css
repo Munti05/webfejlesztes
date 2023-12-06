@@ -168,7 +168,6 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     margin-top: auto;
     text-align: center;
     padding: 2vh 5vh 2vh 5vh;
@@ -193,6 +192,7 @@ footer {
 .jelentkezes_footer {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin: 1vw 0 1vw 0;
     height: 7vh;
 }
