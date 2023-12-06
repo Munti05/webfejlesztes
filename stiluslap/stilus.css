@@ -742,7 +742,7 @@ label.error {
     }
 
     .jelentkezes_urlap {
-        flex-basis: 90%;
+        flex-basis: 85%;
     }
 
     .tabla_cim {
@@ -915,7 +915,7 @@ label.error {
     }
 
     .jelentkezes_urlap {
-        width: 80%;
+        flex-basis: 70%;
     }
 
     .tabla_cim {
